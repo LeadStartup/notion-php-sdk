@@ -97,6 +97,7 @@ class BasicBlock extends Record implements BlockInterface, Arrayable
             ColumnListBlock::BLOCK_TYPE => ColumnListBlock::class,
             ColumnBlock::BLOCK_TYPE => ColumnBlock::class,
             NumberedListBlock::BLOCK_TYPE => NumberedListBlock::class,
+            BulletedListBlock::BLOCK_TYPE => BulletedListBlock::class
         ];
     }
 
