@@ -92,6 +92,20 @@ class NotionClient
 
         return $collection;
     }
+    
+    
+
+    /**
+     * @param string $identifier
+     * @return BlockInterface
+     */
+    public function getAttributes(string $identifier): BlockInterface
+    {
+        $blockId = Identifier::fromString($identifier);
+        $attributes = $this->loadPageChunk($blockId);
+
+        return $attributes;
+    }
 
     private function loadPageChunk(UuidInterface $blockId): array
     {
