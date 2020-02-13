@@ -111,7 +111,7 @@ class NotionClient
     {
         $response = $this->cachedJsonRequest('block-'.$blockId->toString(), 'loadPageChunk', [
             'pageId' => $blockId->toString(),
-            'limit' => 50,
+            'limit' => 50000,
             'cursor' => ['stack' => []],
             'chunkNumber' => 0,
             'verticalColumns' => false,
